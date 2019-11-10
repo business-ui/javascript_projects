@@ -1,3 +1,4 @@
+
 :root {
     --blue:#007bff;
     --indigo:#6610f2;
@@ -47,7 +48,7 @@ body {
     background-color: #fff;
 }
 
-@media (min-width:768) {
+@media (min-width:768px) {
     .header-blue {
         padding-bottom: 120px;
     }
@@ -88,6 +89,63 @@ body {
 
     .contact-clean form {
         padding: 30px;
+    }
+    .circle-container {
+      position: relative;
+      /* 1 */
+      width: 20em;
+      height: 20em;
+      padding: 0;
+      border-radius: 50%;
+      list-style: none;
+      /* 2 */
+      box-sizing: content-box;
+      /* 3 */
+      margin: 5em auto 0;
+      border: solid 5px tomato;
+    }
+    .circle-container > * {
+      /* 4 */
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 6em;
+      height: 6em;
+      margin: -3em;
+    }
+    .circle-container > :nth-of-type(1) {
+      transform: rotate(0deg) translate(10em) rotate(0deg);
+    }
+    .circle-container > :nth-of-type(2) {
+      transform: rotate(45deg) translate(10em) rotate(-45deg);
+    }
+    .circle-container > :nth-of-type(3) {
+      transform: rotate(90deg) translate(10em) rotate(-90deg);
+    }
+    .circle-container > :nth-of-type(4) {
+      transform: rotate(135deg) translate(10em) rotate(-135deg);
+    }
+    .circle-container > :nth-of-type(5) {
+      transform: rotate(180deg) translate(10em) rotate(-180deg);
+    }
+    .circle-container > :nth-of-type(6) {
+      transform: rotate(225deg) translate(10em) rotate(-225deg);
+    }
+    .circle-container > :nth-of-type(7) {
+      transform: rotate(270deg) translate(10em) rotate(-270deg);
+    }
+    .circle-container > :nth-of-type(8) {
+      transform: rotate(315deg) translate(10em) rotate(-315deg);
+    }
+
+    .circle-container img {
+      display: block;
+      width: 100%;
+      border-radius: 50%;
+    }
+    .circle-container img:hover {
+      filter: grayscale(0);
     }
 }
 
@@ -257,21 +315,26 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     text-align:right;
 }
 
-.header-blue div.iphone-mockup {
+.header-blue div.my-face {
     position:relative;
     max-width:300px;
-    margin:20px;
     display:inline-block;
+    background-image: url("./img/ryan.jpeg");
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    width: 180px;
+    height:180px;
+
 }
 
-.header-blue .iphone-mockup img.device {
+.header-blue .my-face img.device {
     width:50%;
     height:auto;
 }
 
 
 
-.header-blue .iphone-mockup .screen:before {
+.header-blue .my-face .screen:before {
     content:'';
     background-color:#fff;
     position:absolute;
@@ -462,3 +525,72 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     opacity:0.8;
 }
 
+.circle-container {
+  position: relative;
+  /* 1 */
+  width: 20em;
+  height: 20em;
+  padding: 0;
+  border-radius: 50%;
+  list-style: none;
+  /* 2 */
+  box-sizing: content-box;
+  /* 3 */
+/*  margin: 5em auto 0;
+*/  border: solid 5px transparent;
+}
+.circle-container > * {
+  /* 4 */
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6em;
+  height: 6em;
+/*  margin: -1.5em;
+*/}
+.circle-container > :nth-of-type(1) {
+  transform: rotate(0deg) translate(10em) rotate(0deg);
+  border-radius: 25px;
+}
+.circle-container > :nth-of-type(2) {
+  transform: rotate(45deg) translate(10em) rotate(-45deg);
+}
+.circle-container > :nth-of-type(3) {
+  transform: rotate(90deg) translate(10em) rotate(-90deg);
+}
+.circle-container > :nth-of-type(4) {
+  transform: rotate(135deg) translate(10em) rotate(-135deg);
+}
+.circle-container > :nth-of-type(5) {
+  transform: rotate(180deg) translate(10em) rotate(-180deg);
+}
+.circle-container > :nth-of-type(6) {
+  transform: rotate(225deg) translate(10em) rotate(-225deg);
+}
+.circle-container > :nth-of-type(7) {
+  transform: rotate(270deg) translate(10em) rotate(-270deg);
+}
+.circle-container > :nth-of-type(8) {
+  transform: rotate(315deg) translate(10em) rotate(-315deg);
+  border-radius: 25px;
+}
+
+.circle-container img {
+  display: block;
+  width: 100%;
+  /*border-radius: 50%;*/
+}
+
+a.center > img, a.deg315 > img{
+    border-radius: 8px;
+}
+
+
+a.deg45, a.deg90, a.deg135 {
+    width: 135px;
+}
+
+.github {
+    width: 35px;
+}
